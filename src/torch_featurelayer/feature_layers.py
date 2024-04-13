@@ -1,4 +1,3 @@
-from collections import OrderedDict
 from typing import Any
 
 import torch
@@ -22,9 +21,9 @@ class FeatureLayers:
     def __init__(self, model: torch.nn.Module, feature_layer_paths: list[str]):
         self._model: torch.nn.Module = model
         self.feature_layer_paths: list[str] = feature_layer_paths
-        self.feature_layer_outputs: dict[str, torch.Tensor] = OrderedDict().fromkeys(feature_layer_paths, None)
+        self.feature_layer_outputs: dict[str, torch.Tensor | None] = dict().fromkeys(feature_layer_paths, None)
 
-    def __call__(self, *args: Any, **kwargs: Any) -> tuple[dict[str, torch.Tensor], torch.Tensor]:
+    def __call__(self, *args: Any, **kwargs: Any) -> tuple[dict[str, torch.Tensor | None], torch.Tensor]:
         """Perform a forward pass through the model and update the hooked feature layers.
 
         Args:

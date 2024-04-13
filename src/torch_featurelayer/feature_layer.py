@@ -52,6 +52,7 @@ class FeatureLayer:
         output: torch.Tensor = self._model(*args, **kwargs)
 
         # Remove hook
-        h.remove()
+        if h is not None:
+            h.remove()
 
         return self.feature_layer_output, output
