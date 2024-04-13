@@ -1,0 +1,21 @@
+[project]
+name = "torch-featurelayer"
+authors = [{ name = "spencerwooo", email = "spencer.woo@outlook.com" }]
+requires-python = ">=3.10,<3.13"
+readme = "README.md"
+dependencies = ["torch>=2.0,<2.3"]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = ["mypy", "ruff", "torchvision"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = { attr = "featurelayer.__version__" }
+
+[tool.ruff]
+line-length = 120
+format.quote-style = "single"
