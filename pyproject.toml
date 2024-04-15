@@ -27,7 +27,7 @@ Documentation = "https://github.com/spencerwooo/torch-featurelayer/blob/main/REA
 
 [project.optional-dependencies]
 dev = ["mypy", "ruff"]
-test = ["torchvision>=0.15,<0.18"]
+test = ["torchvision>=0.15,<0.18", "pytest"]
 
 [build-system]
 requires = ["setuptools"]
