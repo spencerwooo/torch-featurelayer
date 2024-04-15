@@ -3,10 +3,10 @@
 
 # torch-featurelayer
 
-Simple utility functions and wrappers for hooking onto layers within PyTorch models for feature extraction.
+🧠 Simple utility functions and wrappers for hooking onto layers within PyTorch models for feature extraction.
 
-| 🧠   | For a more sophisticated and complete implementation, check the official [`torch.fx`](https://pytorch.org/docs/stable/fx.html). |
-| --- | :------------------------------------------------------------------------------------------------------------------------------ |
+> [!TIP]
+> This library is intended to be a simplified and well-documented implementation for extracting a PyTorch model's intermediate layer output(s). For a more sophisticated and complete implementation, either consider using [`torchvision.models.feature_extraction`](https://pytorch.org/vision/stable/feature_extraction.html), or check the official [`torch.fx`](https://pytorch.org/docs/stable/fx.html). 
 
 ## Usage
 
