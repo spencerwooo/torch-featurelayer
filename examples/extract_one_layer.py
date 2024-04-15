@@ -1,7 +1,6 @@
 import torch
-from torchvision.models import vgg11
-
 from torch_featurelayer import FeatureLayer
+from torchvision.models import vgg11
 
 # Load a pretrained VGG-11 model
 model = vgg11(weights='DEFAULT').eval()

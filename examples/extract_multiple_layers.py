@@ -1,7 +1,6 @@
 import torch
-from torchvision.models import resnet50
-
 from torch_featurelayer import FeatureLayers
+from torchvision.models import resnet50
 
 # Load a pretrained ResNet-50 model
 model = resnet50(weights='DEFAULT').eval()

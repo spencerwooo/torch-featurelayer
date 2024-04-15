@@ -15,9 +15,8 @@
 
 ```python
 import torch
-from torchvision.models import vgg11
-
 from torch_featurelayer import FeatureLayer
+from torchvision.models import vgg11
 
 # Load a pretrained VGG-11 model
 model = vgg11(weights='DEFAULT').eval()
@@ -43,7 +42,7 @@ Check the [examples](./examples/) directory for more.
 
 > `torch_featurelayer.FeatureLayers(model: torch.nn.Module, feature_layer_paths: list[str])`
 
-> `torch_featurelayer.get_layer_candidates(module: nn.Module, max_depth: int = 1)`
+> `torch_featurelayer.get_layer_candidates(module: torch.nn.Module, max_depth: int = 1)`
 
 ## License
 
