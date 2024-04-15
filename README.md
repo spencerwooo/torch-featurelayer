@@ -1,4 +1,7 @@
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![image](https://img.shields.io/pypi/v/torch-featurelayer.svg)](https://pypi.python.org/pypi/torch-featurelayer)
+[![image](https://img.shields.io/pypi/l/torch-featurelayer.svg)](https://pypi.python.org/pypi/torch-featurelayer)
+[![image](https://img.shields.io/pypi/pyversions/torch-featurelayer.svg)](https://pypi.python.org/pypi/torch-featurelayer)
 [![lint](https://github.com/spencerwooo/torch-featurelayer/actions/workflows/ci.yml/badge.svg)](https://github.com/spencerwooo/torch-featurelayer/actions/workflows/ci.yml)
 
 # torch-featurelayer

@@ -1,10 +1,29 @@
 [project]
 name = "torch-featurelayer"
+description = "Useful utility functions and wrappers for hooking onto layers within PyTorch models for feature extraction."
 authors = [{ name = "spencerwooo", email = "spencer.woo@outlook.com" }]
 requires-python = ">=3.10,<3.13"
 readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["torch", "pytorch", "torchvision", "feature-extraction"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: GPU :: NVIDIA CUDA",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
 dependencies = ["torch>=2.0,<2.3"]
 dynamic = ["version"]
+
+[project.urls]
+Repository = "https://github.com/spencerwooo/torch-featurelayer"
+Documentation = "https://github.com/spencerwooo/torch-featurelayer/blob/main/README.md"
 
 [project.optional-dependencies]
 dev = ["mypy", "ruff"]
