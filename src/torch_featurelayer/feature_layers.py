@@ -2,7 +2,7 @@ from typing import Any
 
 import torch
 
-from torch_featurelayer.rgetattr import rgetattr
+from torch_featurelayer._rgetattr import rgetattr
 
 
 class FeatureLayers:
