@@ -2,7 +2,8 @@
 [![image](https://img.shields.io/pypi/v/torch-featurelayer.svg)](https://pypi.python.org/pypi/torch-featurelayer)
 [![image](https://img.shields.io/pypi/l/torch-featurelayer.svg)](https://pypi.python.org/pypi/torch-featurelayer)
 [![image](https://img.shields.io/pypi/pyversions/torch-featurelayer.svg)](https://pypi.python.org/pypi/torch-featurelayer)
-[![lint](https://github.com/spencerwooo/torch-featurelayer/actions/workflows/ci.yml/badge.svg)](https://github.com/spencerwooo/torch-featurelayer/actions/workflows/ci.yml)
+[![lint](https://github.com/spencerwooo/torch-featurelayer/actions/workflows/lint.yml/badge.svg)](https://github.com/spencerwooo/torch-featurelayer/actions/workflows/lint.yml)
+[![test](https://github.com/spencerwooo/torch-featurelayer/actions/workflows/test.yml/badge.svg)](https://github.com/spencerwooo/torch-featurelayer/actions/workflows/test.yml)
 
 # torch-featurelayer
 

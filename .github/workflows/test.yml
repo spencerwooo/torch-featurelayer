@@ -1,4 +1,4 @@
-name: lint
+name: test
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  pre-commit:
+  ci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,19 +18,11 @@ jobs:
           python-version: "3.12"
           cache: "pip" # caching pip dependencies
 
-      - name: Setup deps
+      - name: Setup deps for tests
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -e '.[dev]'
+          python -m pip install -e '.[test]'
 
-      - name: Ruff format
-        uses: chartboost/ruff-action@v1
-        with:
-          args: format --check
-
-      - name: Ruff lint
-        uses: chartboost/ruff-action@v1
-
-      - name: Mypy
+      - name: Test with pytest
         run: |
-          mypy src/
+          pytest -v -s
