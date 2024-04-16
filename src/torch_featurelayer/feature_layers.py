@@ -19,6 +19,7 @@ class FeatureLayers:
     """
 
     def __init__(self, model: torch.nn.Module, feature_layer_paths: list[str]):
+        assert isinstance(model, torch.nn.Module), 'model must be a torch.nn.Module'
         self._model: torch.nn.Module = model
         self.feature_layer_paths: list[str] = feature_layer_paths
         self.feature_layer_outputs: dict[str, torch.Tensor | None] = dict().fromkeys(feature_layer_paths, None)

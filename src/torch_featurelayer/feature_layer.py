@@ -21,6 +21,7 @@ class FeatureLayer:
     """
 
     def __init__(self, model: torch.nn.Module, feature_layer_path: str):
+        assert isinstance(model, torch.nn.Module), 'model must be a torch.nn.Module'
         self._model: torch.nn.Module = model
         self.feature_layer_path: str = feature_layer_path
         self.feature_layer_output: torch.Tensor | None = None  # output of the feature layer (must be global)

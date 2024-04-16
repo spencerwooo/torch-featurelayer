@@ -1,15 +1,12 @@
-from torchvision.models import alexnet
+import pytest
 from torch_featurelayer import get_layer_candidates
+from torchvision.models import alexnet
 
 
 def test_get_layer_candidates_depth1():
     model = alexnet()
     candidates = list(get_layer_candidates(model, max_depth=1))
-    assert candidates == [
-        'features',
-        'avgpool',
-        'classifier',
-    ]
+    assert candidates == ['features', 'avgpool', 'classifier']
 
 
 def test_get_layer_candidates_depth2():
@@ -40,3 +37,17 @@ def test_get_layer_candidates_depth2():
         'classifier.5',
         'classifier.6',
     ]
+
+
+def test_get_layer_candidates_invalid_model():
+    with pytest.raises(AssertionError) as e:
+        model = 'invalid_model'
+        get_layer_candidates(model, max_depth=1)
+    assert str(e.value) == 'model must be a torch.nn.Module'
+
+
+def test_get_layer_candidates_negative_depth():
+    with pytest.raises(AssertionError) as e:
+        model = alexnet()
+        get_layer_candidates(model, max_depth=-1)
+    assert str(e.value) == 'max_depth must be a non-negative integer'

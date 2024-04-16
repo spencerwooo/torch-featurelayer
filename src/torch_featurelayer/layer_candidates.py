@@ -13,6 +13,9 @@ def get_layer_candidates(module: nn.Module, max_depth: int = 1) -> Generator[str
         Generator: A generator of the model's layer candidates in dot notation.
     """
 
+    assert max_depth >= 0, 'max_depth must be a non-negative integer'
+    assert isinstance(module, nn.Module), 'model must be a torch.nn.Module'
+
     def get_modules(model: nn.Module, prefix: str = '', depth: int = 0) -> Generator[str, None, None]:
         if prefix:
             yield prefix

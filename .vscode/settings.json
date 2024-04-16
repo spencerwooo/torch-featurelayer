@@ -1,6 +1,9 @@
 {
     "python.testing.pytestArgs": [
-        "."
+        "test",
+        "--color=yes",
+        "-o",
+        "log_cli=true"
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true
