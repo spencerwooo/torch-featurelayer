@@ -18,7 +18,7 @@ classifiers = [
     "Programming Language :: Python :: 3 :: Only",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-dependencies = ["torch>=2.0,<2.3"]
+dependencies = ["torch>=2.0,<2.5"]
 dynamic = ["version"]
 
 [project.urls]
@@ -27,7 +27,7 @@ Documentation = "https://github.com/spencerwooo/torch-featurelayer/blob/main/REA
 
 [project.optional-dependencies]
 dev = ["mypy", "ruff"]
-test = ["torchvision>=0.15,<0.18", "pytest"]
+test = ["torchvision>=0.15,<0.20", "pytest"]
 
 [build-system]
 requires = ["setuptools"]
