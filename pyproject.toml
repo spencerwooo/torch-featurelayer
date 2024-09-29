@@ -2,7 +2,7 @@
 name = "torch-featurelayer"
 description = "Useful utility functions and wrappers for hooking onto layers within PyTorch models for feature extraction."
 authors = [{ name = "spencerwooo", email = "spencer.woo@outlook.com" }]
-requires-python = ">=3.10,<3.13"
+requires-python = ">=3.10"
 readme = "README.md"
 license = { file = "LICENSE" }
 keywords = ["torch", "pytorch", "torchvision", "feature-extraction"]
@@ -18,7 +18,7 @@ classifiers = [
     "Programming Language :: Python :: 3 :: Only",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-dependencies = ["torch>=2.0,<2.3"]
+dependencies = ["torch"]
 dynamic = ["version"]
 
 [project.urls]
